@@ -40,6 +40,9 @@ class CoreCommands implements Commands {
   @override
   Future<void> configure(List<CommandBase> commands) async {
     try {
+      if (commands.isEmpty) {
+        throw Exception();
+      }
       final runner = _getRunner();
 
       for (var command in commands) {
@@ -47,7 +50,7 @@ class CoreCommands implements Commands {
       }
 
       _runner = runner;
-    } on DomainError catch (_) {
+    } catch (_) {
       throw Constants.notInitializeErrorMsg;
     }
   }
