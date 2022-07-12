@@ -1,8 +1,7 @@
 name: core_cli
-description: A starting point for Dart libraries or applications.
+description: Simple core to create your CLI.
 version: 1.0.0
-# homepage: https://www.example.com
-
+homepage: https://mateussiqueira.dev/core-cli
 environment:
   sdk: '>=2.17.5 <3.0.0'
 
